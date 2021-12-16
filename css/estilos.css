@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.elgeneral{
+    max-width: 1920px;
+    margin: auto;
+}
+
+
+.separador{
+    background: purple;
+    height: 10px; 
+}
+
+.header{
+    display: flex; 
+    padding: 20px 10px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header__logo{
+   max-width: 100%;
+}
+
+.header__logo:hover {
+   cursor: pointer;
+}
+
+.header__list{
+    list-style: none;
+    display: flex;
+}
+
+.header__item{
+    margin: 0px 1rem;
+}
+
+.header__link{
+    text-decoration: none;
+    color: purple; 
+    font-family: 'Londrina Solid', cursive;
+    font-size: 1.4rem;
+}
+
+.header__link:hover{
+    background: #FF0033;
+    color: #fff; 
+}
+
+.main{
+    overflow: hidden;
+}
+
+.hero{
+    height: 80vh;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+}
+
+.hero__contenedor{
+    color: purple; 
+    padding: 20px 15px;
+    position: relative;
+    left: 30px;
+}
+
+
+.hero__contenedor--img img{
+    width: 100%;
+}
+
+.hero__titulo{
+    font-family: 'Londrina Solid', cursive;
+    font-weight: 400;
+    font-size: 4.5rem;
+}
+
+.btn{
+    background-color: #FF0033;
+    border: none; 
+    color: white; 
+    padding: 12px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.complementoMain {
+    color: white;
+    background-color: purple;
+    padding: 60px 40px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+
+.complementoMain__contenedor{
+  flex-basis: 100%;
+}
+
+.complementoMain__video{
+    width: 100%;
+}
+
+
+.complementoMain__titulo{
+    font-family: 'Londrina Solid', cursive;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.complementoMain__parrafo{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+.equipo{
+    background-color:white;
+    color:purple; 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-image: url("../img/section-1.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+}
+
+.equipo__contenedor{
+    display: flex;
+    flex-direction: row; /*porque su padre es column*/
+    padding: 10px 60px;
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+.equipo__titulo--grande{
+    font-family: 'Londrina Solid', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 20px 0px; 
+    text-align: center;
+}
+
+.equipo__miembro{
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.8;
+
+}
+
+.equipo__img{
+    width: 100%;
+    border-radius: 50%;
+    max-width: 160px;
+    height: 160px;
+    object-fit: cover;
+    margin: auto;
+}
+
+.equipo__img--azul{
+    border: 10px solid #001F45;
+}
+
+.equipo__img--rojo{
+    border: 10px solid #FF0033;
+}
+
+.equipo__img--rosa{
+    border: 10px solid #D0004B;
+}
+
+.equipo__img--gris{
+    border: 10px solid #40516B;
+}
+
+.complementoEquipo{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.complementoEquipo__contenedor{
+  display: flex;
+  padding: 10px 60px;
+  gap: 50px; 
+  align-items: center; 
+}
+
+.complementoEquipo__img{
+    width: 100%;
+}
+
+.complementoEquipo__contenedor--texto{
+    flex-basis: 100%;
+}
+
+.complementoEquipo__titulo{
+    font-family: 'Londrina Solid', cursive;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.complementoEquipo__parrafo{
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.footer{
+ display: flex; 
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ padding: 10px 60px;
+}
+
+.footer__columna{
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.footer__logo{
+    max-width: 200px;
+    margin: auto;
+}
+
+.footer__list{
+    list-style: none;
+}
+
+.footer__list a{
+    text-decoration: none;
+    margin: 10px 0px;
+    display: inline-block;
+}
+
+
+.break{
+    display: none;
+}
+
+
+/* MEDIA QUERIES */
+
+/*TABLET*/
+@media screen and (max-width: 768px) {
+        .footer, .complementoEquipo__contenedor, .equipo__contenedor, .complementoMain {
+        flex-direction: column;
+    }
+
+    .complementoEquipo__contenedor, .equipo__contenedor, .complementoMain {
+        padding: 10px 20px;
+    }
+
+    .hero__titulo {
+       font-size: 2.5rem;
+    }
+
+    .hero__contenedor {
+        color: purple;
+        padding: 0px;
+        left: 10px;
+        top: 0px; 
+    }
+    .hero{
+        grid-template-columns: 1fr;
+    }
+
+    .break{
+        display: block; 
+    }
+        
+}
+
+
+@media screen and (max-width: 425px) {
+    .hero__contenedor{
+        order: 1; 
+        align-self: start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .hero__contenedor--img{
+        order: -1; 
+    }
+
+    .equipo{
+        background-color:white;
+        color:purple; 
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background-image: url("../img/section-2.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES 
+
+@media screen and (max-width: 768px) {
+    .footer{
+        flex-direction: column;
+        gap: 20px; 
+    }
+    .complementoEquipo__contenedor, .equipo__contenedor, .complementoMain {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .complementoEquipo__parrafo, .complementoEquipo__titulo{
+        text-align: center;
+    }
+
+    .hero {
+        height: 40vh;
+        background-color: white;
+        background-image: url(../img/section-1.png);
+        background-position: center top;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero__contenedor {
+        color: purple;
+        padding: 15px;
+        position: absolute;
+        bottom: 5%;
+    }
+
+    .hero__titulo{
+        font-size: 1.4rem;
+    }
+
+    .break{
+        display: block; 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .break{
+        display: none; 
+    }
+}
+
+
+*/
