@@ -129,7 +129,7 @@
 
 
 .equipo{
-    background-color:black;
+    background-color: tomato;
     color:purple; 
     display: flex;
     flex-direction: column;
